@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h2>Atividade 5 - formulários</h2>
+        <table>
+            <thead>
+                <th></th>
+                <th>Dados</th>
+            </thead>
+            <tr>
+                <th>Nome</th>
+                <td>Pâmela Carvalho</td>
+            </tr>
+            <tr>
+                <th>Prontuário:</th>
+                <td>SP3026876</td>
+            </tr>
+            <tr>
+                <th>Turma:</th>
+                <td>313 - Integrado em informática</td>
+            </tr>
+        </table>
+    </header>
+    <fieldset>
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Dados Pessoais:</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Insira seu nome aqui" required>
+                <br><br>
+                <label for="dt-nasc">Data de nascimento:</label>
+                <input type="date" name="dt-nasc" id="dt-nasc" min="1900-01-01" max="2021-06-15" required>
+                <br><br>
+                <label for="regiao">Região onde nasceu:</label>
+                <select name="regiao" id="regiao" required>
+                    <option value="">Escolha uma opção</option>
+                    <option value="central">Centro-oeste</option>
+                    <option value="nordeste">Nordeste</option>
+                    <option value="norte">Norte</option>
+                    <option value="sudeste">Sudeste</option>
+                    <option value="sul">Sul</option>
+                </select>
+                <br><br>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999"
+                    pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
+                    title="Preencha neste modelo: (99) 99999-9999" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <br><br>
+                <label for="formacao">Formação</label>
+                <br>
+                <input type="radio" name="formacao" id="formado">
+                <label for="formado">Formado</label>
+                <br>
+                <input type="radio" name="formacao" id="estudante">
+                <label for="estudante">Estudante</label>
+                <br><br>
+                <label for="humor">Seu humor hoje está:</label>
+                <input type="range" name="humor" id="humor" min="0" max="10" step="2" value="8">
+            </fieldset>
+            <fieldset>
+                <legend>Gostos</legend>
+                <label for="cor">Cor favorita:</label>
+                <input type="color" name="cor" id="cor">
+                <br><br>
+                <label for="frase">Uma frase que você gosta:</label>
+                <textarea name="frase" id="frase" cols="30" rows="10"
+                    placeholder="Ex.: 'Em todos esses anos nessa indústria vital, é a primeira vez que isso me acontece'"></textarea>
+                <br><br>
+                <label for="list">Em relação a sua alimentação:</label>
+                <input id="list" list="alimentacao" placeholder="Sou...">
+                <datalist id="alimentacao">
+                    <option value="Frugívoro(a)">
+                    <option value="Vegano(a)">
+                    <option value="Vegetariano(a)">
+                    <option value="Onívoro(a)">
+                </datalist>
+                <br><br>
+                <label for="informatica">Na área da informática, você gosta de:</label>
+                <br>
+                <input type="checkbox" name="informatica" id="front" checked>
+                <label for="front">Front-end</label>
+                <br>
+                <input type="checkbox" name="informatica" id="back">
+                <label for="back">Back-end</label>
+                <br>
+                <input type="checkbox" name="informatica" id="bdd">
+                <label for="bdd">Banco de dados</label>
+                <br><br>
+                <label for="leitura">O campo a seguir não faz nada</label>
+                <input size="50" type="text" id="leitura" value="Um campo apenas para leitura" readonly>
+            </fieldset>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Resetar">
+        </form>
+    </fieldset>
+</body>
+
+</html>
