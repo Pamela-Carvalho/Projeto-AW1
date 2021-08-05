@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pâmela Carvalho | Dev</title>
+    <title id="title">Pâmela Carvalho | Dev</title>
 
     <!-- Icones -->
     <link rel="stylesheet" href="assets/style.css" />
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" id="style">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <input type="checkbox" name="" id="mood">
+    <!-- <input type="checkbox" name="" id="mode"> -->
     <header id="header">
         <nav class="container">
             <h1 class="logo"><a href="#"><span>//</span>Pâmela Carvalho</a></h1>
@@ -44,10 +44,11 @@
                         <li><a href="#"><i class="icon-Linkedin"></i></a></li>
                     </ul>
                     <hr>
-                    <div><i class="icon-toggle-on"></i></div>
-                    <!-- <div>
-                        <label for="mood" class="mood"></label>
-                    </div> -->
+                    <div class="switch-container">
+                        <input type="checkbox" name="" id="mode" checked>
+                        <label for="mode" class="mode" onclick="mode();">
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="toggle icon-menu"><strong>&#8285;</strong></div>

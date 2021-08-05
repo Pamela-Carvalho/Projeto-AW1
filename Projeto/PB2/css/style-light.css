@@ -11,17 +11,17 @@ ul{
 
 a{
     text-decoration: none;
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
 }
 
 /* variables */
 :root{
     --header-height: 4.5rem;
     /* dark' */
-    --main-color-dark: hsl(208, 40%, 29%);
+    --main-color-light: hsl(0, 100%, 99%);
 
     /* text */
-    --text-color-light: hsl(0, 0%, 91%);
+    --text-color-dark: hsl(208, 40%, 29%);
 
     /* details */
     --detail-yellow: hsl(39, 93%, 78%);
@@ -42,8 +42,8 @@ html{
 
 body{
     font-family: 'Montserrat', sans-serif;
-    color: var(--text-color-light);
-    background-color: var(--main-color-dark);
+    color: var(--text-color-dark);
+    background-color: var(--main-color-light);
 }
 
 header{
@@ -59,7 +59,7 @@ section{
     position: fixed;
     top: 0;
     z-index: 100;
-    background-color: var(--main-color-dark);
+    background-color: var(--main-color-light);
 }
 
 #header.scroll{
@@ -67,11 +67,11 @@ section{
 }
 
 /* layout */
-/* #home{
+#home{
     min-height: 90vh;
-} */
+}
 
-#home, #about, #skills, #portfolio, #contact{
+#about, #skills, #portfolio, #contact{
     min-height: 100vh;
 }
 
@@ -119,6 +119,13 @@ h1{
     padding: 0 0.5rem;
 }
 
+.icon-toggle-on{
+    color: var(--text-color-dark);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* toggle mode */
 .switch-container label{
     display: inline-table;
     position: relative;
@@ -128,7 +135,7 @@ h1{
     padding: 2px;
     width: 2rem;
     height: 1.2rem;
-    background-color: var(--main-color-dark);
+    background-color: var(--main-color-light);
     border-radius: 60px;
 }
 
@@ -143,7 +150,7 @@ h1{
 
 .switch-container label:before {
     right: -6px;
-    background-color: var(--main-color-dark);
+    background-color: var(--text-color-dark);
     border-radius: 60px;
     transition: all 0.4s;
 }
@@ -152,7 +159,7 @@ h1{
     width: 0.6rem;
     height: 0.6rem;
     margin: 0.1rem;
-    background-color: var(--text-color-light);
+    background-color: var(--main-color-light);
     border-radius: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.4s;
@@ -161,12 +168,12 @@ h1{
 }
 
 #mode:checked + label:before {
-    background-color: var(--text-color-light);
+    background-color: var(--text-color-dark);
 }
 
 #mode:checked + label:after {
     transform: translateX(1.3rem);
-    background-color: var(--main-color-dark);
+    background-color: var(--main-color-light);
 }
 
 hr{
@@ -191,14 +198,14 @@ nav.container ul li a{
 }
   
 nav.container ul li a:hover, .icon-toggle-on:hover{
-    color: var(--detail-yellow);
+    color: var(--detail-salmon);
 }
   
 nav.container ul li a::after{
     content: "";
     width: 0%;
     height: 2px;
-    background-color: var(--detail-yellow);
+    background-color: var(--detail-salmon);
   
     position: absolute;
     left: 0;
@@ -251,10 +258,10 @@ nav.show .menu{
     opacity: 1;
     visibility: visible;
   
-    background-color: var(--detail-salmon);
+    background-color: var(--detail-yellow);
   
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
   
     position: fixed;
     top: 0;
@@ -274,6 +281,7 @@ nav.show ul.grid{
 
 nav .icon-close{
     font-family: 'Montserrat', sans-serif !important;
+    color: var(--text-color-dark);
     visibility: hidden;
     opacity: 0;
 
@@ -296,31 +304,6 @@ input[type="checkbox"]{
     display: none;
 }
 
-label.mood:before{
-    content: "Light";
-    position: absolute;
-    color: var(--color-text-btn);
-    background-color: var(--color-background-btn);
-    padding: 10px 20px;
-  }
-  
-  input[type="checkbox"]:checked + header,input[type="checkbox"]:checked + main,input[type="checkbox"]:checked + footer{
-    /* dark' */
-    /* --main-color-dark: hsl(208, 40%, 29%); */
-    --main-color-dark: hsl(0, 100%, 99%);
-
-    /* --text-color-light: hsl(0, 0%, 91%); */
-    --text-color-light: hsl(208, 40%, 29%);
-
-    /* details */
-    --detail-yellow: hsl(6, 79%, 65%);
-    --detail-salmon: hsl(39, 93%, 78%);
-  }
-  
-  input[type="checkbox"]:checked + header label.mood:before{
-    content: "Dark";
-  }
-  
 /* home */
 #home{
     display: grid;
@@ -345,7 +328,7 @@ label.mood:before{
 .spot-left{
     width: 15rem;
     height: 19.7rem;
-    background-image: url(../assets/img/mancha1.png);
+    background-image: url(../assets/img/mancha1\ light.png);
     background-size: 15rem;
     position: absolute;
     z-index: -1;
@@ -356,11 +339,11 @@ label.mood:before{
 .spot-right{
     width: 8rem;
     height: 12.75rem;
-    background-image: url(../assets/img/mancha2.png);
+    background-image: url(../assets/img/mancha2\ light.png);
     background-size: 8rem;
     position: absolute;
     z-index: -1;
-    top: 33rem;
+    top: 30rem;
     right: 0;
 }
 
@@ -378,7 +361,7 @@ label.mood:before{
 }
 
 .cover p, .btn{
-    color: var(--detail-yellow);
+    color: var(--detail-salmon);
     letter-spacing: 1px;
 }
 
@@ -386,7 +369,7 @@ label.mood:before{
     text-transform: uppercase;
     font-size: 0.875rem;
     transition: 0.2s;
-    border: 1.5px solid var(--detail-yellow);
+    border: 1.5px solid var(--detail-salmon);
     border-radius: 50px;
     width: 10rem;
     height: 3.215rem;
@@ -398,8 +381,8 @@ label.mood:before{
 }
 
 .btn:hover{
-    background-color: var(--detail-yellow);
-    color: var(--main-color-dark);
+    background-color: var(--detail-salmon);
+    color: var(--main-color-light);
 }
 
 .btn:first-child{
@@ -447,7 +430,7 @@ h3{
 }
 
 #about i:hover{
-    color: var(--detail-yellow);
+    color: var(--detail-salmon);
 }
 
 #about nav{
@@ -456,11 +439,6 @@ h3{
 }
 
 /* skills */
-#skills{
-    max-width: 62.5rem;
-    margin: auto;
-}
-
 #skills article{
     margin-top: 2.5rem;
 }
@@ -483,11 +461,12 @@ h3{
 .card-description{
     background-color: var(--detail-salmon);
     margin-top: 3rem;
+    color: hsl(0, 0%, 91%);
 }
 
 .card-skill{
-    background-color: #375E81;
-    color: var(--text-color-light);
+    background-color: var(--detail-yellow);
+    color: var(--text-color-dark);
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -585,6 +564,7 @@ div.card-skill p:first-child{
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 4px 20px rgba(77, 166, 186, 0.38);
 }
 
 #contact form div{
@@ -622,8 +602,6 @@ input[type='text'], input[type='email'], input[type='tel']{
 
 input[type='text']:focus, input[type='email']:focus, input[type='tel']:focus, textarea:focus{
     background-color: #FFFCFC;
-    box-shadow: 0 0 0 0;
-    outline: 0;
 }
 
 ::placeholder{
@@ -633,7 +611,7 @@ input[type='text']:focus, input[type='email']:focus, input[type='tel']:focus, te
 
 input[type='submit']{
     border: 1px solid var(--detail-yellow);
-    background-color: var(--main-color-dark);
+    background-color: var(--text-color-dark);
     color: var(--detail-yellow);
     text-transform: uppercase;
     font-size: 1rem;
@@ -641,10 +619,12 @@ input[type='submit']{
     border-radius: 50px;
     padding: 0.7rem 1.4rem;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 input[type='submit']:hover{
-    transform: scale(1.05, 1.05);
+    font-size: 1rem;
+    padding: 0.75rem 1.45rem;
 }
 
 /* footer */

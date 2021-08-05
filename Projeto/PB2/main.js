@@ -61,3 +61,17 @@ scrollReveal.reveal(
   { interval: 100 }
 )
 
+function mode(){
+  var estilo = document.querySelector('#style');
+  // console.log(estilo)
+  // estilo.href = "css/style.css"
+
+  if(document.querySelector('#mode').checked){
+    console.log("on")
+    estilo.href = "css/style-light.css"
+  }
+  else{
+    console.log("off")
+    estilo.href = "css/style.css"
+  }
+}
