@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/style.css" />
 
     <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Style -->
@@ -98,7 +99,7 @@
                         <div>
                             <div class="card-skill">
                                 <p><i class="icon-Vector"></i></p>
-                                <p>&lt;desing&#8725;&gt;</p>
+                                <p>&lt;design&#8725;&gt;</p>
                             </div>
                             <div class="card-skill">
                                 <p>&lt;&#8725;&gt;</p>
@@ -221,37 +222,87 @@
         <section id="portfolio">
             <h3>Portfólio</h3>
             <article class="projects">
-                <video width="320" controls>
-                    <source src="assets/video/terralis.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <video width="320" controls>
-                    <source src="assets/video/terralis.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <video width="320" controls>
-                    <source src="assets/video/terralis.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <video width="320" controls>
-                    <source src="assets/video/terralis.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="item-portfolio">
+                            <div>
+                                <img src="assets/img/terralis.jpeg" alt="">
+                                <div>
+                                    <a class="btn btn-portfolio" href="#projeto1"><strong>Saiba mais</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item-portfolio">
+                            <div>
+                                <img src="assets/img/floresta da matematica.jpeg" alt="">
+                                <div>
+                                    <a class="btn btn-portfolio" href="#projeto2"><strong>Saiba mais</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-slide">Slide 3</div> -->
+                    <!-- ... -->
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div id="projeto1" class="modal">
+                    <div>
+                        <a class="close" href="#portfolio"><strong>x</strong></a>
+                        <div>
+                            <video width="320" controls>
+                                <source src="assets/video/terralis.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                            <h4>Terrális</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere unde repellendus error, ab iure eligendi maxime accusamus commodi deleniti esse tenetur a architecto minus impedit cumque! Consequuntur iure id consectetur!</p>
+                            <div>
+                                <a class="btn-modal" target="_blank" href="https://github.com/Terralis"><strong>Saiba mais</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="projeto2" class="modal">
+                    <div>
+                        <a class="close" href="#portfolio"><strong>x</strong></a>
+                        <div>
+                            <video width="320" controls>
+                                <source src="assets/video/terralis.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                            <h4>Floresta da Matemática</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dicta quae sunt possimus ex obcaecati itaque quis, sed quia reprehenderit error laudantium dolor voluptate repellendus cupiditate fugit aut et ad.</p>
+                            <div>
+                                <a class="btn-modal" target="_blank" href="https://github.com/Floresta-da-Matematica"><strong>Saiba mais</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </article>
             <article class="grid statistic">
                 <div class="spot-left-statistic"></div>
                 <div class="spot-right-statistic"></div>
-                <div>
-                    <p>1+</p>
-                    <p>Anos de experiência</p>
-                </div>
-                <div>
-                    <p>3+</p>
-                    <p>Projetos realizados</p>
-                </div>
-                <div>
-                    <p>2</p>
-                    <p>Projetos em andamento</p>
+                <div class="values">
+                    <div>
+                        <p>1+</p>
+                        <p>Anos de experiência</p>
+                    </div>
+                    <div>
+                        <p>3+</p>
+                        <p>Projetos realizados</p>
+                    </div>
+                    <div>
+                        <p>2</p>
+                        <p>Projetos em andamento</p>
+                    </div>
                 </div>
             </article>
         </section>
@@ -287,6 +338,10 @@
     </footer>
     
     <a href="#home" class="back-to-top"><strong>❯</strong></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>

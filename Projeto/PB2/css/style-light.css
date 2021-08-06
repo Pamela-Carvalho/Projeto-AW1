@@ -439,6 +439,11 @@ h3{
 }
 
 /* skills */
+#skills{
+    max-width: 62.5rem;
+    margin: auto;
+}
+
 #skills article{
     margin-top: 2.5rem;
 }
@@ -529,9 +534,59 @@ div.card-skill p:first-child{
     border-radius: 25px;
 }
 
+/* swiper */
+.swiper-container {
+    width: 50rem;
+    height: 25rem;
+}
+
+.item-portfolio{
+    width: 37.5rem;
+    height: 21rem;
+    background-color: hsl(0deg 0% 99%);
+    display: inline-block;
+    padding: 3rem;
+    margin: 2rem;
+    border-radius: 25px;
+    transition: 0.2s;
+    box-shadow: 0px 4px 20px rgba(77, 166, 186, 0.38);
+}
+
+.item-portfolio div div{
+   display: flex;
+   justify-content: center;
+}
+
+.btn-portfolio{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    color: var(--text-color-dark);
+    border: 1.5px solid var(--text-color-dark);
+    transition: 0.2s;
+    margin: 1rem;
+}
+
+.item-portfolio:hover{
+    filter: brightness(50%);
+}
+
+.item-portfolio:hover .btn-portfolio{
+    opacity: 1;
+    visibility: visible;
+    display: inline-flex;
+}
+
+.btn-portfolio:hover{
+    filter: brightness(125%);
+    color: var(--detail-yellow);
+    border: 1.5px solid var(--detail-yellow);
+    background-color: var(--text-color-dark);
+}
+
 .statistic{
     background-color: var(--detail-yellow);
-    color: var(--main-color-dark);
+    color: var(--text-color-dark);
     font-size: 1.25rem;
     font-weight: 500;
     padding: 2.5rem;
@@ -754,6 +809,11 @@ hr{
 }
 
 /* about */
+#about{
+    max-width: 70rem;
+    margin: auto;
+}
+
 #about img{
     width: 40rem;
     margin: 1.625rem 0;
@@ -834,8 +894,15 @@ article.tools table th{
     padding: 4rem;
 }
 
+.values{
+    display: flex;
+    max-width: 62.5rem;
+    margin: auto;
+}
+
 .statistic p{
     width: 10rem;
+    margin: 0 2rem;
 }
 
 .spot-left-statistic{
