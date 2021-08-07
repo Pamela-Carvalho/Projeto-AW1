@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?h9krl1');
-  src:  url('fonts/icomoon.eot?h9krl1#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h9krl1') format('truetype'),
-    url('fonts/icomoon.woff?h9krl1') format('woff'),
-    url('fonts/icomoon.svg?h9krl1#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?f9mm5k');
+  src:  url('fonts/icomoon.eot?f9mm5k#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?f9mm5k') format('truetype'),
+    url('fonts/icomoon.woff?f9mm5k') format('woff'),
+    url('fonts/icomoon.svg?f9mm5k#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,11 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-toggle-off:before {
-  content: "\e90f";
+.icon-dribbble:before {
+  content: "\e90a";
 }
 .icon-codepen:before {
   content: "\e900";
+}
+.icon-toggle-off:before {
+  content: "\e90f";
 }
 .icon-html:before {
   content: "\e901";
@@ -57,9 +60,6 @@
 }
 .icon-visualstudio:before {
   content: "\e909";
-}
-.icon-dribbble:before {
-  content: "\e90a";
 }
 .icon-github:before {
   content: "\e90b";
