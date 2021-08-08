@@ -435,6 +435,11 @@ h3{
 
 .social-media-about nav i{
     font-size: 2.5rem;
+    transition: 0.2s;
+}
+
+.social-media-about nav i:hover{
+    color: var(--detail-salmon);
 }
 
 a i.ajuste{
@@ -953,6 +958,15 @@ article.tools table{
 article.tools table th{
     padding: 1rem 1.5rem;
 }
+
+.tools table th i{
+    font-size: 4rem;
+}
+
+.tools table div.progress div{
+    width: 0.65rem;
+    height: 0.65rem;
+}
     
 /* portfolio */
 .projects{
@@ -1205,6 +1219,15 @@ article.tools table{
 
 article.tools table th{
     padding: 1rem 1.5rem;
+}
+
+.tools table th i{
+    font-size: 4rem;
+}
+
+.tools table div.progress div{
+    width: 0.65rem;
+    height: 0.65rem;
 }
 
 /* portfolio */
@@ -1504,6 +1527,15 @@ article.tools{
 
 article.tools table th{
     padding: 1rem 1.5rem;
+}
+
+.tools table th i{
+    font-size: 4rem;
+}
+
+.tools table div.progress div{
+    width: 0.65rem;
+    height: 0.65rem;
 }
 
 /* portfolio */
