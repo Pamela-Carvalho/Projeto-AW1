@@ -56,7 +56,7 @@ scrollReveal.reveal(
   #about h3, #about img, #about p, #about nav,
   #skills h3, #skills .cards, #skills .tools,
   #portfolio h3, #portfolio article.statistic, #portfolio .statistic div p,
-  #contact h3, #contact form, #contact
+  #contact h3, #contact
   `,
   { interval: 100 }
 )
