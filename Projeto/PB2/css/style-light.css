@@ -1436,13 +1436,13 @@ hr{
     width: 20rem;
     height: 26.2rem;
     background-size: 20rem;
-    top: 12rem;
 }
 
 .spot-right{
     width: 12rem;
     height: 19.2rem;
     background-size: 12rem;
+    top: 20rem;
     right: 0;
 }
 
@@ -1602,7 +1602,7 @@ article.tools table th{
 }
 
 .modal div div div a.btn-modal:hover{
-    color: var(--text-color-light);
+    color: var(--main-color-light);
     background-color: var(--detail-salmon);
 }
 
