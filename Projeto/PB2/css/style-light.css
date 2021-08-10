@@ -1370,7 +1370,11 @@ h3{
     font-size: 1.75rem;
 }
 
-#home, #about, #skills, #portfolio, #contact{
+#home{
+    min-height: 100vh;
+}
+
+#about, #skills, #portfolio, #contact{
     min-height: 85vh;
 }
 
@@ -1432,13 +1436,14 @@ hr{
     width: 20rem;
     height: 26.2rem;
     background-size: 20rem;
+    top: 10rem;
 }
 
 .spot-right{
     width: 12rem;
     height: 19.2rem;
     background-size: 12rem;
-    top: 20rem;
+    top: 25rem;
     right: 0;
 }
 
