@@ -858,7 +858,6 @@ h3{
     
 /* home */
 #home{
-    min-height: 100vh;
     display: inline-flex;
 }
     
@@ -1115,7 +1114,6 @@ h3{
 
 /* home */
 #home{
-    min-height: 100vh;
     display: inline-flex;
     margin: 5rem;
 }
@@ -1374,6 +1372,10 @@ h3{
     font-size: 1.75rem;
 }
 
+#home, #about, #skills, #portfolio, #contact{
+    min-height: 85vh;
+}
+
 /* navigation */
 nav.container{
     font-size: 0.875rem;
@@ -1421,7 +1423,6 @@ hr{
 
 /* home */
 #home{
-    min-height: 100vh;
     display: inline-flex;
 }
 
