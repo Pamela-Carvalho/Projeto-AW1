@@ -38,14 +38,12 @@ a{
 /* base */
 html{
     scroll-behavior: smooth;
-    
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color-dark);
     background-color: var(--main-color-light);
-    /* display: inline-block; */
 }
 
 header{
@@ -69,11 +67,6 @@ section{
 #header.scroll{
     box-shadow: 0px 0px 12px rgb(55, 94, 129);
 }
-
-/* layout */
-/* #home{
-    min-height: 90vh;
-} */
 
 #home, #about, #skills, #portfolio, #contact{
     min-height: 100vh;
@@ -435,6 +428,11 @@ h3{
 
 .social-media-about nav i{
     font-size: 2.5rem;
+    transition: 0.2s;
+}
+
+.social-media-about nav i:hover{
+    color: var(--detail-salmon);
 }
 
 a i.ajuste{
@@ -743,7 +741,6 @@ div.card-skill p:first-child{
     width: 100%;
     display: inline;
     border: none;
-    /* margin-top: 24px; */
     left: auto;
 }
 
@@ -860,7 +857,6 @@ h3{
     
 /* home */
 #home{
-    min-height: 100vh;
     display: inline-flex;
 }
     
@@ -952,6 +948,15 @@ article.tools table{
     
 article.tools table th{
     padding: 1rem 1.5rem;
+}
+
+.tools table th i{
+    font-size: 4rem;
+}
+
+.tools table div.progress div{
+    width: 0.65rem;
+    height: 0.65rem;
 }
     
 /* portfolio */
@@ -1085,7 +1090,6 @@ footer{
 @media only screen and (min-width: 780px) and (max-width: 1179px){
 /* variables */
 :root{
-
     /* fonts */
     --subtitle-size: 1.625rem;
 
@@ -1108,7 +1112,6 @@ h3{
 
 /* home */
 #home{
-    min-height: 100vh;
     display: inline-flex;
     margin: 5rem;
 }
@@ -1207,6 +1210,15 @@ article.tools table th{
     padding: 1rem 1.5rem;
 }
 
+.tools table th i{
+    font-size: 4rem;
+}
+
+.tools table div.progress div{
+    width: 0.65rem;
+    height: 0.65rem;
+}
+
 /* portfolio */
 .projects{
     text-align: center;
@@ -1229,7 +1241,7 @@ article.tools table th{
 
 .modal div{
     margin: 1.5rem auto;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 1.875rem;
     padding-bottom: 0.5rem;
     width: 90%;
@@ -1358,6 +1370,14 @@ h3{
     font-size: 1.75rem;
 }
 
+#home{
+    min-height: 100vh;
+}
+
+#about, #skills, #portfolio, #contact{
+    min-height: 85vh;
+}
+
 /* navigation */
 nav.container{
     font-size: 0.875rem;
@@ -1405,7 +1425,6 @@ hr{
 
 /* home */
 #home{
-    min-height: 100vh;
     display: inline-flex;
 }
 
@@ -1506,6 +1525,15 @@ article.tools table th{
     padding: 1rem 1.5rem;
 }
 
+.tools table th i{
+    font-size: 4rem;
+}
+
+.tools table div.progress div{
+    width: 0.65rem;
+    height: 0.65rem;
+}
+
 /* portfolio */
 .projects{
     text-align: center;
@@ -1528,7 +1556,7 @@ article.tools table th{
 
 .modal div{
     margin: 1.5rem auto;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 1.875rem;
     padding-bottom: 0.5rem;
     width: 75%;
@@ -1574,7 +1602,7 @@ article.tools table th{
 }
 
 .modal div div div a.btn-modal:hover{
-    color: var(--text-color-light);
+    color: var(--main-color-light);
     background-color: var(--detail-salmon);
 }
 

@@ -44,27 +44,26 @@ window.addEventListener('scroll', function () {
 })
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
-// const scrollReveal = ScrollReveal({
-//   origin: 'top',
-//   distance: '30px',
-//   duration: 700,
-//   reset: true
-// })
+const scrollReveal = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+  reset: true
+})
 
-// scrollReveal.reveal(
-//   `#home h2, #home p, #home .btn,
-//   #about h3, #about img, #about p, #about nav,
-//   #skills h3, #skills .cards div div, #skills .tools,
-//   #portfolio h3, #portfolio article.statistic, #portfolio .statistic div p,
-//   #contact h3, #contact form, #contact label, #contact input, #contact textarea
-//   `,
-//   { interval: 100 }
-// )
+scrollReveal.reveal(
+  `#home h2, #home p, #home .btn,
+  #about h3, #about img, #about p, #about nav,
+  #skills h3, #skills .cards, #skills .tools,
+  #portfolio h3, #portfolio article.statistic, #portfolio .statistic div p,
+  #contact h3, #contact
+  `,
+  { interval: 100 }
+)
 
+// dark/light mode
 function mode(){
   var estilo = document.querySelector('#style');
-  // console.log(estilo)
-  // estilo.href = "css/style.css"
 
   if(document.querySelector('#mode').checked){
     console.log("on")
