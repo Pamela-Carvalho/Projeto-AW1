@@ -4,9 +4,10 @@ function init(robot) {
 }
 
 function loop(robot) {
-	robot.action = {type: 'move', amount: 40};
-	if (robot.info().coins > robot.oldCoins || robot.info().energy > robot.oldEnergy) {
-		robot.action = {type: 'jump', amount: 10};
+	robot.move(40);
+	if (robot.info().coins > robot.oldCoins ||
+		 robot.info().energy > robot.oldEnergy) {
+		robot.jump(10);
 	}
 	robot.oldCoins = robot.info().coins;
 	robot.oldEnergy = robot.info().energy;

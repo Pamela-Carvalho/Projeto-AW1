@@ -1,7 +1,8 @@
-function init(robot) {
-	console.log("Robot initializing...");
+function init(robot){
+	
 }
 
 function loop(robot) {
 	robot.move(40);
 }
+

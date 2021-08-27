@@ -1,5 +1,5 @@
 function init(robot) {
-	// your code goes here
+	
 }
 
 function loop(robot) {
