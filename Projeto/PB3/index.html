@@ -9,6 +9,9 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css" id="style">
 
+    <!-- Ícones -->
+    <link rel="stylesheet" href="assets/style.css" id="style">
+
      <!-- Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +20,8 @@
 </head>
 <body>
     <header id="header">
-        <nav class="container">
-            <h1 class="logo"><a href="#"><span>//</span>Pâmela Carvalho</a></h1>
+        <nav>
+            <h1 class="logo"><a href="#">gist</a></h1>
             <!-- menu -->
             <div class="menu">
                 <div>
@@ -41,39 +44,140 @@
             </div>
         </section>
         <section class="container">
-            <h3>Veja todos os seus registros</h3>
-            <a href="" onclick="Modal.open()" class="button new">+ Adicionar título</a>
-            <aside class="aside">
-                <div class="search">
-                    <button type="submit">&#8981;</button>  
-                    <input type="text" id="busca" onkeyup="pesquisar()" placeholder="Pesquise por um título" title="Procure em nosso catálogo">
-                </div>
-                <div class="filter">
-                    <div class="input-group">
-                        <input type="checkbox" name="recente" id="recente">
-                        <label for="recente">Mais recentes</label>
+            <div class="header">
+                <h3>Veja todos os seus registros</h3>
+                <a href="#" onclick="Modal.open()" class="button new">+ Adicionar título</a>
+            </div>
+            <div class="container">
+                <aside class="aside">
+                    <div class="fixed">
+                        <div class="search">
+                            <button type="submit" id="btnBusca">&#8981;</button>  
+                            <input type="search" id="busca" onkeyup="pesquisar()" placeholder="Pesquise por um título" title="Procure em nosso catálogo">
+                        </div>
+                        <div class="filter">
+                            <div class="input-group">
+                                <input type="checkbox" name="recente" id="recente">
+                                <label for="recente">Mais recentes</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="antigo" id="antigo">
+                                <label for="antigo">Menos recentes</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="melhor" id="melhor">
+                                <label for="melhor">Melhor avaliado</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="pior" id="pior">
+                                <label for="pior">Pior avaliado</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="antigo" id="antigo">
-                        <label for="antigo">Menos recentes</label>
+                </aside>
+                <section class="content" id="general">
+                    <!-- os títulos apareceram aqui -->
+                    <div>
+                        <li>
+                            <a href=#2>
+                                <img class=detalhes src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg">
+                                <p class=titulo>Phineas e Ferb</p>
+                            </a>
+                        </li>
                     </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="melhor" id="melhor">
-                        <label for="melhor">Melhor avaliado</label>
+                    <div>
+                        <li>
+                            <a href=#2>
+                                <img class=detalhes src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg">
+                                <p class=titulo>Phineas e Ferb</p>
+                            </a>
+                        </li>
                     </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="pior" id="pior">
-                        <label for="pior">Pior avaliado</label>
+                    <div>
+                        <li>
+                            <a href=#2>
+                                <img class=detalhes src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg">
+                                <p class=titulo>Phineas e Ferb</p>
+                            </a>
+                        </li>
                     </div>
-                </div>
-            </aside>
-            <section class="content" id="general">
-                <!-- os títulos apareceram aqui -->
-            </section>
+
+                    <div id="2" class="popup">
+                        <div class="cartaz3 feedback">
+                            <a href="#filmes" class="btn-close" id="close"><strong>x</strong></a>
+                            <div>
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg" alt="">
+                                <h4>Phineas e Ferb</h4>
+                                <p>Phineas and Ferb invent, scheme, and stay one step ahead of their bratty sister. Meanwhile, their pet platypus plots against evil Dr. Doofenshmirtz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </section>
     </main>
-    <footer>
 
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Novo título</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <label class="sr-only" for="title">Título</label>
+                        <input type="text" id="title" name="title" placeholder="Título" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="banner">Banner</label>
+                        <input type="text" id="banner" name="banner" step="0.01" placeholder="Insira o link do banner">
+                        <small class="help">O banner deve possuir extensão .jpg</small>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="">Nota</label>
+                        <input type="number" name="rating" id="rating">
+                        <a href="javascript:void(0)" onclick="avaliar(1)">
+                            <i id="s1" class="icon-star1"></i>
+                        </a>
+                        <a href="javascript:void(0)" onclick="avaliar(2)">
+                            <i id="s2" class="icon-star1"></i>
+                        </a>
+                        <a href="javascript:void(0)" onclick="avaliar(3)">
+                            <i id="s3" class="icon-star1"></i>
+                        </a>
+                        <a href="javascript:void(0)" onclick="avaliar(4)">
+                            <i id="s4" class="icon-star1"></i>
+                        </a>
+                        <a href="javascript:void(0)" onclick="avaliar(5)">
+                            <i id="s5" class="icon-star1"></i>
+                        </a>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="comment">Comentários</label>
+                        <textarea name="comment" id="comment" cols="10" rows="5"></textarea>
+                    </div>
+
+                    <div class="input-group actions">
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="grid">
+            <h2 class="logo"><a href="#">gist</a></h2>
+            <span>Pâmela Carvalho &copy; 2021</span>
+        </div>
+        <div class="social">
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/Pamela-Carvalho" class="icon-github"></a></li>
+                    <li><a href="https://www.linkedin.com/in/p%C3%A2melacarvalho/" class="icon-linkedin"></a></li>
+                    <li><a href="mailto:pv.sousacarvalho@gmail.com" class="icon-mail-envelope-closed"></a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
     
     <script src="script.js"></script>
