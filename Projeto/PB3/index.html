@@ -17,6 +17,9 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,600;1,700&display=swap" rel="stylesheet">
 
+     <!-- alert -->
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </head>
 <body>
     <header id="header">
@@ -77,41 +80,33 @@
                 </aside>
                 <section class="content" id="general">
                     <!-- os títulos apareceram aqui -->
-                    <div>
+                    <!-- <div>
                         <li>
                             <a href=#2>
                                 <img class=detalhes src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg">
                                 <p class=titulo>Phineas e Ferb</p>
                             </a>
                         </li>
-                    </div>
-                    <div>
-                        <li>
-                            <a href=#2>
-                                <img class=detalhes src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg">
-                                <p class=titulo>Phineas e Ferb</p>
-                            </a>
-                        </li>
-                    </div>
-                    <div>
-                        <li>
-                            <a href=#2>
-                                <img class=detalhes src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg">
-                                <p class=titulo>Phineas e Ferb</p>
-                            </a>
-                        </li>
-                    </div>
+                    </div> -->
 
-                    <div id="2" class="popup">
+                    <!-- <div id="2" class="popup">
                         <div class="cartaz3 feedback">
                             <a href="#filmes" class="btn-close" id="close"><strong>x</strong></a>
                             <div>
                                 <img src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg" alt="">
                                 <h4>Phineas e Ferb</h4>
+                                <div class="rating">
+                                        <img src="assets/img/star0.png" alt="Estrela de avaliação" id="s1">
+                                        <img src="assets/img/star0.png" alt="Estrela de avaliação" id="s2">
+                                        <img src="assets/img/star0.png" alt="Estrela de avaliação" id="s3">
+                                        <img src="assets/img/star0.png" alt="Estrela de avaliação" id="s4">
+                                        <img src="assets/img/star0.png" alt="Estrela de avaliação" id="s5">
+                                </div>
                                 <p>Phineas and Ferb invent, scheme, and stay one step ahead of their bratty sister. Meanwhile, their pet platypus plots against evil Dr. Doofenshmirtz.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                    
                 </section>
             </div>
         </section>
@@ -123,32 +118,34 @@
                 <h2>Novo título</h2>
                 <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
-                        <label class="sr-only" for="title">Título</label>
+                        <label class="sr-only" for="title">Título <span>*</span></label>
                         <input type="text" id="title" name="title" placeholder="Título" autocomplete="off">
                     </div>
                     <div class="input-group">
-                        <label class="sr-only" for="banner">Banner</label>
+                        <label class="sr-only" for="banner">Banner <span>*</span></label>
                         <input type="text" id="banner" name="banner" step="0.01" placeholder="Insira o link do banner">
                         <small class="help">O banner deve possuir extensão .jpg</small>
                     </div>
                     <div class="input-group">
-                        <label class="sr-only" for="">Nota</label>
+                        <label class="sr-only" for="">Nota <span>*</span></label>
                         <input type="number" name="rating" id="rating">
-                        <a href="javascript:void(0)" onclick="avaliar(1)">
-                            <i id="s1" class="icon-star1"></i>
-                        </a>
-                        <a href="javascript:void(0)" onclick="avaliar(2)">
-                            <i id="s2" class="icon-star1"></i>
-                        </a>
-                        <a href="javascript:void(0)" onclick="avaliar(3)">
-                            <i id="s3" class="icon-star1"></i>
-                        </a>
-                        <a href="javascript:void(0)" onclick="avaliar(4)">
-                            <i id="s4" class="icon-star1"></i>
-                        </a>
-                        <a href="javascript:void(0)" onclick="avaliar(5)">
-                            <i id="s5" class="icon-star1"></i>
-                        </a>
+                        <div class="stars">
+                            <div>
+                                <img src="assets/img/star0.png" alt="Estrela de avaliação" onclick="avaliar(1)" id="s1">
+                            </div>
+                            <div>
+                                <img src="assets/img/star0.png" alt="Estrela de avaliação" onclick="avaliar(2)" id="s2">
+                            </div>
+                            <div>
+                                <img src="assets/img/star0.png" alt="Estrela de avaliação" onclick="avaliar(3)" id="s3">
+                            </div>
+                            <div>
+                                <img src="assets/img/star0.png" alt="Estrela de avaliação" onclick="avaliar(4)" id="s4">
+                            </div>
+                            <div>
+                                <img src="assets/img/star0.png" alt="Estrela de avaliação" onclick="avaliar(5)" id="s5">
+                            </div>
+                        </div>
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="comment">Comentários</label>
