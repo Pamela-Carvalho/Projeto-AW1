@@ -56,23 +56,23 @@
                     <div class="fixed">
                         <div class="search">
                             <button type="submit" id="btnBusca">&#8981;</button>  
-                            <input type="search" id="busca" onkeyup="pesquisar()" placeholder="Pesquise por um título" title="Procure em nosso catálogo">
+                            <input type="search" id="busca" onkeyup="Search.findRegistration()" placeholder="Pesquise por um título" title="Procure em nosso catálogo">
                         </div>
                         <div class="filter">
                             <div class="input-group">
-                                <input type="checkbox" name="recente" id="recente">
+                                <input type="radio" name="filter" id="recente" onclick="App.reload()">
                                 <label for="recente">Mais recentes</label>
                             </div>
                             <div class="input-group">
-                                <input type="checkbox" name="antigo" id="antigo">
+                                <input type="radio" name="filter" id="antigo" onclick="App.reload()">
                                 <label for="antigo">Menos recentes</label>
                             </div>
                             <div class="input-group">
-                                <input type="checkbox" name="melhor" id="melhor">
+                                <input type="radio" name="filter" id="melhor" onclick="App.reload()">
                                 <label for="melhor">Melhor avaliado</label>
                             </div>
                             <div class="input-group">
-                                <input type="checkbox" name="pior" id="pior">
+                                <input type="radio" name="filter" id="pior" onclick="App.reload()">
                                 <label for="pior">Pior avaliado</label>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                     </div>
 
                     <div class="input-group actions">
-                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <a href="#" onclick="Modal.close(); Form.clearFields()" class="button cancel">Cancelar</a>
                         <button>Salvar</button>
                     </div>
                 </form>

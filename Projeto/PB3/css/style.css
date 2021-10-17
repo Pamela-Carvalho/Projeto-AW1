@@ -181,6 +181,7 @@ nav.show div.icon-close{
 
 div.container{
     display: grid;
+    position: relative;
 }
 
 /* buttons */
@@ -214,7 +215,7 @@ div.container{
     margin-bottom: 1rem;
 }
 
-.button.cancel{
+.button.cancel, .options button{
     color: var(--pink);
     border: 2px var(--pink) solid;
     border-radius: 0.25rem;
@@ -226,8 +227,23 @@ div.container{
     transition: 0.2s;
 }
 
-.button.cancel:hover{
+.options button#edit{
+    color: var(--purple);
+    border: 2px var(--purple) solid;
+}
+
+.options button{
+    width: 100%;
+    margin: 0 0.5rem;
+}
+
+.button.cancel:hover, .options button:hover{
     opacity: 1;
+}
+
+div.popup div.options{
+    display: flex;
+    margin: 1.25rem 0 0;
 }
 
 /* aside */
@@ -357,7 +373,7 @@ div.container{
 }
 
 #rating{
-    /* display: none; */
+    display: none;
 }
 
 /* listagem */
@@ -440,7 +456,6 @@ div.container{
     background-color: rgba(0, 0, 0, 0.6);
 	position: fixed;
 	z-index: 999;
-    padding-bottom: 100px;
 	display: block;
     overflow-y: auto;
     margin-bottom: 100px;
@@ -498,10 +513,11 @@ div.container, .container div.header{
 }
 
 aside{
-    position: relative;
+    position: inherit;
     width: 18.75rem;
-    margin-right: 3rem;
+    margin-right: 10rem;
 }
+
 aside div.fixed{
     position: fixed;
 }

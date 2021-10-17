@@ -61,7 +61,6 @@ function avaliar(estrela) {
     document.getElementById("s3").src = "assets/img/star1.png";
     document.getElementById("s4").src = "assets/img/star1.png";
     document.getElementById("s5").src = "assets/img/star1.png";
-    console.log(s5)
     avaliacao = 5;
     } else {
     document.getElementById("s1").src = "assets/img/star1.png";
@@ -167,9 +166,64 @@ const Registration = {
     App.reload()
   },
   remove(index){
+    var radio = document.getElementsByName("filter");
+    for(let i = 0; i < radio.length; i++){
+      radio[i].checked = false;
+    }
+    App.reload()
+
     Registration.all.splice(index, 1)
 
     App.reload()
+  }
+}
+
+const Filters = {
+  list: Registration.all,
+  recent(list){
+    var aux
+
+    for (let i = 0; i < list.length; i++) {
+      for (let j = 0; j < list.length; j++) {
+        if (list.indexOf(list[i]) > list.indexOf(list[j])) {
+          aux = list[i]
+          list[i] = list[j]
+          list[j] = aux
+        }
+      }
+    }
+    
+    return list
+  },
+  better(list){
+    var aux
+    
+    for (let i = 0; i < list.length; i++) {
+      for (let j = 0; j < list.length; j++) {
+        if (list[i].rating > list[j].rating) {
+          aux = list[i]
+          list[i] = list[j]
+          list[j] = aux
+        }
+      }
+    }
+    
+    return list
+  },
+  worse(list){
+    var aux
+    
+    for (let i = 0; i < list.length; i++) {
+      for (let j = 0; j < list.length; j++) {
+        if (list[i].rating < list[j].rating) {
+          aux = list[i]
+          list[i] = list[j]
+          list[j] = aux
+        }
+      }
+    }
+    
+    return list
   }
 }
 
@@ -185,6 +239,16 @@ const DOM = {
     var stars = ``;
 
     switch (registration.rating) {
+      case '0':
+        stars = `
+        <div class="rating">
+          <img src="assets/img/star0.png" alt="Estrela de avaliação">
+          <img src="assets/img/star0.png" alt="Estrela de avaliação">
+          <img src="assets/img/star0.png" alt="Estrela de avaliação">
+          <img src="assets/img/star0.png" alt="Estrela de avaliação">
+          <img src="assets/img/star0.png" alt="Estrela de avaliação">
+        </div>`
+        break;
       case '1':
         stars = `
         <div class="rating">
@@ -241,20 +305,23 @@ const DOM = {
     
     const html = `
     <li>
-      <a href="#2">
+      <a href="#${Registration.all.indexOf(registration)}">
         <img class=detalhes src="${registration.banner}">
         <p class=titulo>${registration.title}</p>
       </a>
     </li>
     
-    <div id="2" class="popup">
+    <div id="${Registration.all.indexOf(registration)}" class="popup">
       <div class="cartaz3 feedback">
         <a href="#filmes" class="btn-close" id="close"><strong>x</strong></a>
         <div>
-          <img src="https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_UY268_CR1,0,182,268_AL_.jpg" alt="">
-          <h4>Phineas e Ferb</h4>
+          <img src="${registration.banner}" alt="">
+          <h4>${registration.title}</h4>
           ${stars}
           <p>${registration.comment}</p>
+          <div class="options">
+            <button id="del" onclick="Registration.remove(${Registration.all.indexOf(registration)})">Deletar</button>
+          </div>
         </div>
       </div>
     </div>`
@@ -300,6 +367,12 @@ const Form = {
     Form.banner.value = ""
     Form.rating.value = ""
     Form.comment.value = ""
+    
+    document.getElementById("s1").src = "assets/img/star0.png";
+    document.getElementById("s2").src = "assets/img/star0.png";
+    document.getElementById("s3").src = "assets/img/star0.png";
+    document.getElementById("s4").src = "assets/img/star0.png";
+    document.getElementById("s5").src = "assets/img/star0.png";
   },
   submit(event){
     event.preventDefault()
@@ -321,15 +394,69 @@ const Form = {
   }
 }
 
+const Search = {
+  findRegistration(){
+    var input, filtro, menu, menuItens, links;
+    input = document.getElementById("busca");
+    filtro = input.value.toUpperCase();
+    menu = document.getElementById("general");
+    menuItens = menu.getElementsByTagName("li");
+
+    for (var i = 0; i < menuItens.length; i++) {
+      links = menuItens[i].getElementsByTagName("a")[0];
+      if (links.innerHTML.toUpperCase().indexOf(filtro) > -1) {
+        menuItens[i].style.display = "";
+      }
+      else{
+        menuItens[i].style.display = "none";
+      }
+    }
+  }
+}
+
 const App = {
   init(){
-    Registration.all.forEach(DOM.addRegistration)
+    var list = Registration.all
+
+    list.forEach(registration => {
+      DOM.addRegistration(registration)
+    })
     
     Storage.set(Registration.all)
   },
   reload(){
     DOM.clearRegistrations()
-    App.init()
+
+    if(document.querySelector('#recente').checked){
+      App.recent()
+    } else if(document.querySelector('#melhor').checked){
+      App.better()
+    } else if(document.querySelector('#pior').checked){
+      App.worse()
+    } else{
+      App.init()
+    }
+  },
+  recent(){
+    var list = Filters.recent(Registration.all)
+    list.forEach(registration => {
+      DOM.addRegistration(registration)
+    })
+    list = Filters.recent(Registration.all)
+  },
+  better(){
+    var list = Filters.better(Registration.all)
+    list.forEach(registration => {
+      DOM.addRegistration(registration)
+    })
+    list = Filters.better(Registration.all)
+  },
+  worse(){
+    var list = Filters.worse(Registration.all)
+    list.forEach(registration => {
+      DOM.addRegistration(registration)
+    })
+    list = Filters.worse(Registration.all)
   }
 }
 
