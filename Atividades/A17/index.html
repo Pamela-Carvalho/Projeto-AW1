@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A17</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" id="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Validação de formulário com JS</h1>
+    <h4>Atividade 17</h4>
+
+    <main>
+        <form action="">
+            <div class="input-group">
+                <label for="tel">Telefone</label>
+                <input type="text" data-js="tel" id="tel">
+            </div>
+            <div class="input-group">
+                <label for="cpf">CPF</label>
+                <input type="text" data-js="cpf" id="cpf">
+            </div>
+            <div class="input-group">
+                <label for="rg">RG</label>
+                <input type="text" data-js="rg" id="rg">
+            </div>
+            <div class="input-group">
+                <label for="cep">CEP</label>
+                <input type="text" data-js="cep" id="cep">
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="text" id="email">
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <small>A senha deve ter no mínimo 8 caracteres</small>
+                <input type="password" id="password">
+            </div>
+            <button id="button">Enviar</button>
+        </form>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
