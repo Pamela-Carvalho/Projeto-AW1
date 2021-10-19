@@ -68,7 +68,7 @@ button.addEventListener('click', (event) =>{
     } else {
         rg.classList.remove("errorInput")
     }
-
+    
     if (cep.value == '' || cep.value.length < 9) {
         cep.classList.add("errorInput")
     } else {
