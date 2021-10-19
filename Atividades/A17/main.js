@@ -51,49 +51,37 @@ button.addEventListener('click', (event) =>{
     const email = document.getElementById('email')
     const password = document.getElementById('password')
 
-    if (tel.value == '') {
+    if (tel.value == '' || tel.value.length < 14) {
         tel.classList.add("errorInput")
     } else {
         tel.classList.remove("errorInput")
     }
 
-    if (cpf.value == '') {
+    if (cpf.value == '' || cpf.value.length < 14) {
         cpf.classList.add("errorInput")
     } else {
         cpf.classList.remove("errorInput")
     }
 
-    if (rg.value == '') {
+    if (rg.value == '' || rg.value.length < 12) {
         rg.classList.add("errorInput")
     } else {
         rg.classList.remove("errorInput")
     }
 
-    if (cep.value == '') {
+    if (cep.value == '' || cep.value.length < 9) {
         cep.classList.add("errorInput")
     } else {
         cep.classList.remove("errorInput")
     }
 
-    if (email.value == '') {
+    if (email.value == '' || email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) {
         email.classList.add("errorInput")
     } else {
         email.classList.remove("errorInput")
     }
 
-    if (password.value == '') {
-        password.classList.add("errorInput")
-    } else {
-        password.classList.remove("errorInput")
-    }
-
-    if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) {
-        email.classList.add("errorInput")
-    } else {
-        email.classList.remove("errorInput")
-    }
-
-    if (password.value.length < 8) {
+    if (password.value == '' || password.value.length < 8) {
         password.classList.add("errorInput")
     } else {
         password.classList.remove("errorInput")
