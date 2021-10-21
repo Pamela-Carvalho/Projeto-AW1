@@ -228,7 +228,7 @@ const Filters = {
 }
 
 const DOM = {
-  registrationsContainer: document.querySelector('#general'),
+  registrationsContainer: document.querySelector('#registration'),
   addRegistration(registration, index){
     const div = document.createElement('div')
     div.innerHTML = DOM.innerHTMLRegistration(registration)
@@ -352,11 +352,13 @@ const Form = {
     if(title.trim() === "" || banner.trim() === "" || rating.trim() === ""){
       throw new Error("Por favor, preencha todos os campos com *.")
     }
+    if(!(banner.endsWith(".jpg") || banner.endsWith(".png") || banner.endsWith(".gif") || banner.endsWith(".svg") || banner.endsWith(".jpeg"))){
+      throw new Error("Insira uma imagem com uma das extensões citadas.")
+    }
   },
   saveRegistration(registration){
     Registration.add(registration)
     Swal.fire({
-      position: 'top-end',
       icon: 'success',
       title: 'Registro concluído',
       timer: 1500

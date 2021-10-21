@@ -166,17 +166,8 @@ nav.show div.icon-close{
 }
 
 /* container */
-
-/* .container{
-    display: inline-grid;
-} */
-
 .container h3, .container a, .container aside div{
     margin: 0.25rem 0;
-}
-
-.container div.header{
-    display: inline-grid;
 }
 
 div.container{
@@ -361,7 +352,7 @@ div.popup div.options{
 }
 
 #form img{
-    width: 2rem;
+    width: 1rem;
 }
 
 #form .stars{
@@ -369,7 +360,7 @@ div.popup div.options{
 }
 
 #form .stars div{
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 #rating{
@@ -394,6 +385,10 @@ div.popup div.options{
 .content div{
     display: inline-block;
     margin: 1.875rem 0;
+}
+
+div#registration{
+    margin-top: 0;    
 }
 
 .feedback .rating img{
@@ -463,11 +458,10 @@ div.popup div.options{
 
 /* footer */
 footer{
+    position: relative;
     background: var(--green);
-}
-
-footer{
     padding: 1rem 2rem;
+    z-index: 3;
 }
   
 footer .logo, footer .grid{
@@ -493,8 +487,12 @@ footer .social a:hover{
 
 
 @media(min-width: 500px){
-/* footer */
+/* container */
+.content div.header{
+    display: block;
+}
 
+/* footer */
 footer{
     display: flex;
     justify-content: space-between;
@@ -503,6 +501,7 @@ footer{
 }
 
 @media(min-width: 600px){
+/* container */
 div.container, .container div.header{
     display: flex;
     justify-content: space-between;
@@ -512,16 +511,32 @@ div.container, .container div.header{
     align-items: center;
 }
 
+/* aside */
 aside{
     position: inherit;
     width: 18.75rem;
-    margin-right: 10rem;
+    margin-right: 18rem;
 }
 
 aside div.fixed{
     position: fixed;
+    padding: 4rem 2rem 2rem 0;
+    height: 100%;
+    box-shadow: 6px 0 4px -6px #888;
 }
-.content{
-    /* position: absolute; */
+
+/* form */
+#form img{
+    width: 2rem;
+}
+
+#form .stars div{
+    margin: 1rem;
+}
+}
+
+@media(min-width: 700px){
+aside{
+    margin-right: 16rem;
 }
 }
