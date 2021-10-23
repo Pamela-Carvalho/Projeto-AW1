@@ -318,7 +318,9 @@ const DOM = {
           <img src="${registration.banner}" alt="">
           <h4>${registration.title}</h4>
           ${stars}
-          <p>${registration.comment}</p>
+          <div class="comment">
+            <p>${registration.comment}</p>
+          </div>
           <div class="options">
             <button id="del" onclick="Registration.remove(${Registration.all.indexOf(registration)})">Deletar</button>
           </div>

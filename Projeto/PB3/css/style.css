@@ -243,6 +243,10 @@ div.popup div.options{
     position: relative;
 }
 
+input[type="search"]::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
 #busca{
     height: 2rem;
     width: 16.75rem;
@@ -314,6 +318,7 @@ div.popup div.options{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     padding: 0.8rem;
     width: 100%;
+    resize: none;
 }
 
 #form .input-group span{
@@ -371,6 +376,7 @@ div.popup div.options{
 .content{
     padding: 0;
     text-align: center;
+    width: 100%;
 }
 
 .content img.detalhes, .feedback img{
@@ -383,8 +389,21 @@ div.popup div.options{
 }
 
 .content div{
-    display: inline-block;
     margin: 1.875rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+div.comment{
+    max-width: 30rem;
+    word-wrap: break-word;
+    margin: auto;
+    display: block;
+}
+
+#del{
+    max-width: 15rem;
+    margin: auto;
 }
 
 div#registration{
