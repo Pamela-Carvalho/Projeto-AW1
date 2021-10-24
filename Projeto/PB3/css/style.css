@@ -408,9 +408,13 @@ footer .social li{
     display: inline-block;
     font-size: 1.5rem;
 }
+
+footer .social a{
+    display: flex;
+}
   
 footer .social a:hover{
-    transform: translateY(-8px);
+    transform: translateY(-4px);
 }
 
 
