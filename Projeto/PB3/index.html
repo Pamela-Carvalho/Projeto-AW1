@@ -26,19 +26,6 @@
     <header id="header">
         <nav>
             <h1 class="logo"><a href="#">gist</a></h1>
-            <!-- menu -->
-            <div class="menu">
-                <div>
-                    <ul class="grid">
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#cine">Cinema</a></li>
-                        <li><a href="#books">Livros</a></li>
-                        <li><a href="#songs">Músicas</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="toggle icon-menu"><strong>&#8285;</strong></div>
-            <div class="toggle icon-close">x</div>
         </nav>
     </header>
     <main>
@@ -51,19 +38,13 @@
             <div class="container">
                 <aside class="aside">
                     <div class="fixed">
+                        <h3>Pesquisa</h3>
                         <div class="search">
                             <button type="submit" id="btnBusca">&#8981;</button>  
                             <input type="search" id="busca" onkeyup="Search.findRegistration()" placeholder="Pesquise por um título" title="Procure em nosso catálogo">
                         </div>
+                        <h3>Filtros</h3>
                         <div class="filter">
-                            <div class="input-group">
-                                <input type="radio" name="filter" id="recente" onclick="App.reload()">
-                                <label for="recente">Mais recentes</label>
-                            </div>
-                            <div class="input-group">
-                                <input type="radio" name="filter" id="antigo" onclick="App.reload()">
-                                <label for="antigo">Menos recentes</label>
-                            </div>
                             <div class="input-group">
                                 <input type="radio" name="filter" id="melhor" onclick="App.reload()">
                                 <label for="melhor">Melhor avaliado</label>
@@ -126,7 +107,8 @@
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="comment">Comentários</label>
-                        <textarea name="comment" id="comment" cols="10" rows="5" maxlength="255"></textarea>
+                        <textarea name="comment" id="comment" cols="10" rows="5" maxlength="200"></textarea>
+                        <small class="help">O cometário pode ter no máximo 200 caracteres</small>
                     </div>
 
                     <div class="input-group actions">
