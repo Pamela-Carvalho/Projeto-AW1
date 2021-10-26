@@ -201,10 +201,12 @@ input[type="search"]::-webkit-search-cancel-button{
 }
 
 .modal{
+    overflow: auto;
     background: #f0f2f5;
     padding: 2.4rem;
     max-width: 37.5rem;
     width: 90%;
+    height: 95%;
     position: relative;
     z-index: 1;
     border-radius: 0.625rem;
