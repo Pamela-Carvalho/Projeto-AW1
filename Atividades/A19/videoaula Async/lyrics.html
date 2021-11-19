@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <title>Formulário</title>
+    <title>Lyrics Search by Pâmela</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,6 +10,33 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1>Lyrics Search</h1>
+      </div>
+      <div class="row justify-content-center">
+        <form action="" id="lyrics_form">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="artist">Artist</label>
+              <input type="text" class="form-control" id="artist" name="artist" placeholder="Artist's name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="song">Song</label>
+              <input type="text" class="form-control" id="song" name="song" placeholder="Song's name">
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Let's Sing</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <pre class="mt-4" id="lyrics">
+        
+      </pre>
+    </div>
       
     <script src="lyrics.js"></script>
     <!-- Optional JavaScript -->
