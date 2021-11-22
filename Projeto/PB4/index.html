@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula Bootstrap</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
+
+<style>
+  @media (max-width: 576px) {
+    .knowledges, .classes {
+      flex-direction: column;
+    }
+    .basics-knowledges {
+      padding-top: 3rem;
+    }
+    .classes-item, .classes-item div{
+      display: flex;
+      width: 100%;
+    }
+  }
+</style>
+
 <body>
     <nav class="navbar navbar-light bg-light fixed-top shadow-sm">
         <div class="container-fluid">
@@ -30,9 +47,6 @@
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#technologies">Tecnologias</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#startup">Startup</a>
-                </li>
                 <div class="btn-group" style="display: -webkit-box;">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#principles">Princípios</a>
@@ -46,6 +60,12 @@
                     <li><a class="dropdown-item" href="#list-item-3">Download do Botstrap</a></li>
                   </ul>
                 </div>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#startup">Inicialização</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#components">Classes</a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#team">Grupo</a>
                 </li>
@@ -150,7 +170,7 @@
           <div class="row row-cols-1 row-cols-md-3 mt-0">
             <div class="col my-3">
               <div class="card h-100">
-                <img src="https://blog-geek-midia.s3.amazonaws.com/wp-content/uploads/2021/08/19161229/ide-javascript.png" class="card-img-top" alt="...">
+                <img src="https://blog-geek-midia.s3.amazonaws.com/wp-content/uploads/2021/08/19161229/ide-javascript.png" class="card-img-top" alt="..." style="height: 213px;">
                 <div class="card-body">
                   <h5 class="card-title">Bootstrap.js</h5>
                   <p class="card-text">Para que funcionem de maneira correta, certos componentes e recursos do framework precisam executar algumas funções em JavaScript. Como exemplos, temos: modais, que mostram mensagens de alerta e botões ao usuário; o controle de paginação e diversas outras funcionalidades do Bootstrap. Para que isso seja possível, ele contém o arquivo denominado "bootstrap.js"</p>
@@ -159,7 +179,7 @@
             </div>
             <div class="col my-3">
               <div class="card h-100">
-                <img src="https://terminalroot.com.br/assets/img/css/css.jpg" class="card-img-top" alt="..." style="height: 181.64px">
+                <img src="https://terminalroot.com.br/assets/img/css/css.jpg" class="card-img-top" alt="..." style="height: 213px">
                 <div class="card-body">
                   <h5 class="card-title">Bootstrap.css</h5>
                   <p class="card-text">Esse é o principal arquivo de estilo da ferramenta. Nele estão contidas as classes e variáveis pré-definidas do framework, que servem para criar os layouts e formatação dos componentes das páginas ja incluindo a responsividade</p>
@@ -168,7 +188,7 @@
             </div>
             <div class="col my-3">
               <div class="card h-100">
-                <div class="card-img-top" style="height: 181.64px; background-image: url('https://iconstore.co/assets/img/set/thumb/vivid-thumb.png'); background-position: center">
+                <div class="card-img-top" style="height: 213px; background-image: url('https://iconstore.co/assets/img/set/thumb/vivid-thumb.png'); background-position: center">
                   <!-- <img src="https://iconstore.co/assets/img/set/thumb/vivid-thumb.png" class="card-img-top" alt="Coleção de ícones"> -->
                 </div>
                 <div class="card-body">
@@ -183,14 +203,14 @@
       
       <section id="principles" class="container mb-5 mt-5 position-relative">
         <h3>Princípios básicos de utilização</h3>
-        <div class="d-flex mt-4 position-relative">
+        <div class="knowledges d-flex mt-4 position-relative">
           <div id="list-example" class="list-group">
             <a class="list-group-item list-group-item-action" href="#list-item-1">Conhecimentos básicos</a>
             <a class="list-group-item list-group-item-action" href="#list-item-2">Ambiente de desenvolvimento</a>
             <a class="list-group-item list-group-item-action" href="#list-item-3">Download do Botstrap</a>
           </div>
           <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example ms-4 overflow-auto pe-4" tabindex="0" style="height: 30rem;">
-            <h4 id="list-item-1">Conhecimentos básicos</h4>
+            <h4 class="basics-knowledges" id="list-item-1">Conhecimentos básicos</h4>
             <div class="d-flex justify-content-center pt-3 pb-3">
               <img class="w-50 h-50" src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2019/11/O-Que-%C3%A9-Bootstrap.png" alt="Imagem alusiva a conhecimentos e Bootstrap">              
             </div>
@@ -233,37 +253,190 @@
         </div>
       </section>
 
+      <section id="components" class="container">
+        <h3>Classes</h3>
+        <div class="row mt-4 classes">
+          <div class="col-4 classes-item">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-display" role="tab" aria-controls="list-home">Display</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-position" role="tab" aria-controls="list-profile">Position</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-margin" role="tab" aria-controls="list-messages">Margin</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-padding" role="tab" aria-controls="list-settings">Padding</a>
+            </div>
+          </div>
+          <div class="col-8 classes-item">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-display" role="tabpanel" aria-labelledby="list-display-list">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><code>d-none</code> - para definir como none</li>
+                  <li class="list-group-item"><code>d-inline</code> - para definir como inline</li>
+                  <li class="list-group-item"><code>d-inline-block</code> - para definir como inline-block</li>
+                  <li class="list-group-item"><code>d-block</code> - para definir como block</li>
+                  <li class="list-group-item"><code>d-grid</code> - para definir como grid</li>
+                  <li class="list-group-item"><code>d-table</code> - para definir como table</li>
+                  <li class="list-group-item"><code>d-table-cell</code> - para definir como table-cell</li>
+                  <li class="list-group-item"><code>d-table-row</code> - para definir como table-row</li>
+                  <li class="list-group-item"><code>d-flex</code> - para definir como flex</li>
+                  <li class="list-group-item"><code>d-inline-flex</code> - para definir como inline-flex</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="list-position" role="tabpanel" aria-labelledby="list-position-list">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><code>position-static</code> - para definir como static</li>
+                  <li class="list-group-item"><code>position-relative</code> - para definir como relative</li>
+                  <li class="list-group-item"><code>position-absolute</code> - para definir como absolute</li>
+                  <li class="list-group-item"><code>position-fixed</code> - para definir como fixed</li>
+                  <li class="list-group-item"><code>position-sticky</code> - para definir como sticky</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="list-margin" role="tabpanel" aria-labelledby="list-margin-list">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><code>m</code> - para classes que definem margin</li>
+                  <li class="list-group-item"><code>-t</code> - para classes que definem top</li>
+                  <li class="list-group-item"><code>-b</code> - para classes que definem bottom</li>
+                  <li class="list-group-item"><code>-s</code> - para classes que definem left</li>
+                  <li class="list-group-item"><code>-e</code> - para classes que definem end</li>
+                  <li class="list-group-item"><code>-y</code> - para classes que definem top e bottom</li>
+                  <li class="list-group-item"><code>-x</code> - para classes que definem left e right</li>
+                  <li class="list-group-item">Values</li>
+                  <li class="list-group-item"><code>-0</code> - para classes que definem como 0</li>
+                  <li class="list-group-item"><code>-1</code> - para classes que definem como 1rem * .25</li>
+                  <li class="list-group-item"><code>-2</code> - para classes que definem como 1rem * .5</li>
+                  <li class="list-group-item"><code>-3</code> - para classes que definem como 1rem</li>
+                  <li class="list-group-item"><code>-4</code> - para classes que definem como 1rem * 1.5</li>
+                  <li class="list-group-item"><code>-5</code> - para classes que definem como 1rem * 3</li>
+                  <li class="list-group-item"><code>-auto</code> - para classes que definem como automático</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="list-padding" role="tabpanel" aria-labelledby="list-padding-list">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><code>p</code> - para classes que definem padding</li>
+                  <li class="list-group-item"><code>-t</code> - para classes que definem top</li>
+                  <li class="list-group-item"><code>-b</code> - para classes que definem bottom</li>
+                  <li class="list-group-item"><code>-s</code> - para classes que definem left</li>
+                  <li class="list-group-item"><code>-e</code> - para classes que definem end</li>
+                  <li class="list-group-item"><code>-y</code> - para classes que definem top e bottom</li>
+                  <li class="list-group-item"><code>-x</code> - para classes que definem left e right</li>
+                  <li class="list-group-item">Values</li>
+                  <li class="list-group-item"><code>-0</code> - para classes que definem como 0</li>
+                  <li class="list-group-item"><code>-1</code> - para classes que definem como 1rem * .25</li>
+                  <li class="list-group-item"><code>-2</code> - para classes que definem como 1rem * .5</li>
+                  <li class="list-group-item"><code>-3</code> - para classes que definem como 1rem</li>
+                  <li class="list-group-item"><code>-4</code> - para classes que definem como 1rem * 1.5</li>
+                  <li class="list-group-item"><code>-5</code> - para classes que definem como 1rem * 3</li>
+                  <li class="list-group-item"><code>-auto</code> - para classes que definem como automático</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5 class="mt-4">Grid</h5>
+        <div class="container pt-2">
+          <div class="row">
+            <div class="col-sm">
+              Este é um exemplo
+            </div>
+            <div class="col-sm">
+              De como funciona
+            </div>
+            <div class="col-sm">
+              A utilização de Grid
+            </div>
+            <div class="col-sm">
+              No Bootstrap
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <div class="w-100">
+                <img class="w-100" src="https://i1.sndcdn.com/artworks-dYibrOaPcuXPLQMl-CIri5A-t500x500.jpg" alt="Anavitoria">
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="w-100">
+                <img class="w-100" src="https://portalpopline.com.br/wp-content/uploads/2021/10/jao-capa-pirata-800x800.jpg" alt="Anavitoria">
+              </div>
+            </div>
+            <div class="col-sm">
+              A utilização de Grid
+            </div>
+            <div class="col-sm">
+              No Bootstrap
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              COR, de Anavitoria.
+            </div>
+            <div class="col-sm">
+              De como funciona
+            </div>
+            <div class="col-sm">
+              A utilização de Grid
+            </div>
+            <div class="col-sm">
+              No Bootstrap
+            </div>
+          </div>
+        </div>      
+      </section>
+
       <section id="team" class="container">
         <h3 class="mt-5">Grupo 4</h3>
         <div class="container mb-5 mt-4">
           <div class="row justify-content-around">
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-3" style="width: 18rem;">
               <img src="assets/img/klebs.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Kleber</h5>
                 <p class="card-text">Olá! Sou o Kleber e tenho 18 anos.
-                  Sou estudante do curso Técnico em Informática pelo IFSP - Câmpus São Paulo. Confira abaixo meu repositório do Github.
+                  Sou estudante do curso Técnico em Informática pelo IFSP - Câmpus São Paulo. Confira abaixo meu repositório no Github.
                 </p>
                 <a href="https://github.com/Kloeber-dev" class="btn btn-danger" target="_blank">Saiba Mais</a>
               </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-3" style="width: 18rem;">
               <img src="assets/img/pams.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Pâmela</h5>
                 <p class="card-text">Olá! Sou a Pâmela e tenho 17 anos.
-                  Sou estudante do curso Técnico em Informática pelo IFSP - Câmpus São Paulo. Confira abaixo meu repositório do Github.</p>
+                  Sou estudante do curso Técnico em Informática pelo IFSP - Câmpus São Paulo. Confira abaixo meu repositório no Github.</p>
                 <a href="https://github.com/Pamela-Carvalho" class="btn btn-danger" target="_blank">Saiba Mais</a>
               </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-3" style="width: 18rem;">
               <img src="assets/img/van.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Vanessa</h5>
                 <p class="card-text">Olá! Sou a Vanessa e tenho 18 anos.
-                  Sou estudante do curso Técnico em Informática pelo IFSP - Câmpus São Paulo. Confira abaixo meu repositório do Github.</p>
+                  Sou estudante do curso Técnico em Informática pelo IFSP - Câmpus São Paulo. Confira abaixo meu repositório no Github.</p>
                 <a href="https://github.com/Vanessa-Ro" class="btn btn-danger" target="_blank">Saiba Mais</a>
               </div>
+            </div>
+            <div class="mt-5 d-flex justify-content-center">
+              <!-- Button trigger modal -->
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Agradecemos a sua atenção
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body btn">
+                    <h4 class="text-danger">
+                      Agradecemos a sua atenção!
+                    </h4>
+                    <div class="mt-3">
+                      <img src="https://leitorcabuloso.com.br/wp-content/uploads/2020/01/GIf-agradecimento.gif" alt="Gif agradecimento">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -275,15 +448,12 @@
       <hr class="mb-4">
       <span class="py-2 d-block">Página desenvolvida para Introdução ao Bootstrap - Aplicações para Web 1</span>
       <span class="py-2 d-block">Grupo 4 - &copy;</span>
+      <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Referências utilizadas" data-content="https://getbootstrap.com/docs/4.0/getting-started/introduction/ https://www.homehost.com.br/blog/tutoriais/o-que-e-bootstrap/">Referências</button>
     </footer>
 
     <script src="js/bootstrap.js"></script>
+    <!-- <script src="bootstrap.bundle.min.js/bootstrap.bundle.js"></script> -->
     <script>
-      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl)
-      })
-
       const textCssInput = document.getElementById('cssLink');
       const copyCssButton = document.getElementById('cssCopy');
 
@@ -307,6 +477,24 @@
         textGlyphiconsInput.select();
         document.execCommand('copy');
       });
+
+      $(document).ready(function(){
+      $('[data-toggle="popover"]').popover({html: true});   
+      });
+
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+      var toastTrigger = document.getElementById('liveToastBtn')
+      var toastLiveExample = document.getElementById('liveToast')
+      if (toastTrigger) {
+        toastTrigger.addEventListener('click', function () {
+          var toast = new bootstrap.Toast(toastLiveExample)
+
+          toast.show()
+        })
+      }
     </script>
 </body>
 </html>
