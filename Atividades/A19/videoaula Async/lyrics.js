@@ -28,4 +28,20 @@ function doSubmit(){
         .catch(err => {
             lyrics_el.innerHTML = `Oops! ${err}`;
         });
+
+    // async/await
+    // try{
+    //     const lyricsReponse = await findLyrics(artist.value, song.value);
+    //     const data = await lyricsReponse.json();
+
+    //     if(data.lyrics){
+    //         lyrics_el.innerHTML = data.lyrics;
+    //     }
+    //     else{
+    //         lyrics_el.innerHTML = data.error;
+    //     }
+    // }
+    // catch(err){
+    //     console.log(err);
+    // }
 }
