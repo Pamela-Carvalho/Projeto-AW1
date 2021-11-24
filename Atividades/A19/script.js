@@ -8,19 +8,19 @@ function setPositionUrl(cityName, stateName) {
     var url;
     
     url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName},${stateName},br&appid=${apiKey}&units=metric`;
-    fetchApi(url);
+    calculateWeather(url);
 }
 
-function fetchApi(url) {
+function calculateWeather(url) {
     fetch(url)
-    .then((data) => {
-      return data.json();
+    .then((dados) => {
+      return dados.json();
     })
-    .then((data) => {
-      city.innerHTML = `A temperatura em ${data.name} é:`;
-      temp.innerHTML = data.main.temp;
+    .then((dados) => {
+      city.innerHTML = `A temperatura em ${dados.name} é:`;
+      temp.innerHTML = dados.main.temp;
     })
-    .catch((err) => {
+    .catch(error => {
       city.innerHTML = `Oops... não foi possível concluir a operação.`;
       temp.innerHTML = `-`;
     })
